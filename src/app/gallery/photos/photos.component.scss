@@ -1,0 +1,46 @@
+@import "~src/assets/style/variables";
+
+$min-height: 400px;
+$padding: 20px;
+
+:host {
+  display: block;
+  padding-top: 80px;
+}
+
+.wrapper {
+  display: grid;
+  padding: $wrapper-padding;
+
+  .top {
+    display: grid;
+    grid-gap: $grid-gap;
+    grid-template-areas:
+      "photo photo prev"
+      "photo photo next";
+    grid-template-columns: 500px 500px 1fr;
+
+    .photo {
+      grid-area: photo;
+      min-height: $min-height;
+      //padding: $padding;
+      display: flex;
+    }
+
+    .arrow {
+      background: $yellow;
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      cursor: pointer;
+
+      &.prev {
+        grid-area: prev;
+      }
+
+      &.next {
+        grid-area: next;
+      }
+    }
+  }
+}

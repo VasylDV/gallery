@@ -1,0 +1,16 @@
+$height-header: 80px;
+
+:host {
+  display: block;
+  contain: layout;
+  background: #6d47d9;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+header {
+  height: $height-header;
+  width: 100%;
+  display: flex;
+}
